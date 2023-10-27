@@ -26,7 +26,10 @@
       "@shared/*": ["src/components/shared/*"],
       "@styles/*": ["src/styles/*"],
       "@pages/*": ["src/pages/*"],
-      "@remote/*": ["src/remote/*"]
+      "@remote/*": ["src/remote/*"],
+      "@constants": ["src/constants/index"],
+      "@constants/*": ["src/constants/*"],
+      "@models/*": ["src/models/*"]
     },
     "jsxImportSource": "@emotion/react",
     "forceConsistentCasingInFileNames": true

@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: '**.iconfinder.com',
       },
+      {
+        protocol: 'https',
+        hostname: '**.googleusercontent.com',
+      },
     ],
   },
 }

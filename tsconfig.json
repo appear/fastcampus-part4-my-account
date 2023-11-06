@@ -30,7 +30,8 @@
       "@constants": ["src/constants/index"],
       "@constants/*": ["src/constants/*"],
       "@models/*": ["src/models/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@contexts/*": ["src/contexts/*"]
     },
     "jsxImportSource": "@emotion/react",
     "forceConsistentCasingInFileNames": true

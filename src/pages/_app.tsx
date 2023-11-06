@@ -7,6 +7,7 @@ import globalSteyls from '@styles/globalStyles'
 import Layout from '@shared/Layout'
 import AuthGuard from '@components/auth/AuthGuard'
 import Navbar from '@shared/Navbar'
+import { AlertContextProvider } from '@contexts/AlertContext'
 
 const client = new QueryClient({})
 
@@ -14,18 +15,18 @@ export default function App({
   Component,
   pageProps: { dehydratedState, session, ...pageProps },
 }: AppProps) {
-  console.log('_app')
-
   return (
     <Layout>
       <Global styles={globalSteyls} />
       <SessionProvider session={session}>
         <QueryClientProvider client={client}>
           <Hydrate state={dehydratedState}>
-            <AuthGuard>
-              <Navbar />
-              <Component {...pageProps} />
-            </AuthGuard>
+            <AlertContextProvider>
+              <AuthGuard>
+                <Navbar />
+                <Component {...pageProps} />
+              </AuthGuard>
+            </AlertContextProvider>
           </Hydrate>
         </QueryClientProvider>
       </SessionProvider>

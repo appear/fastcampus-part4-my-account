@@ -13,7 +13,7 @@ const BaseProgressBar = styled.div<{ progress: number }>(({ progress }) => ({
 const Container = styled.div(() => ({
   width: '100%',
   height: 10,
-  backgroundColor: colors.gray,
+  backgroundColor: colors.gray100,
   overflow: 'hidden',
   borderRadius: 6,
 }))

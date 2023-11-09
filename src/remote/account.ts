@@ -1,4 +1,4 @@
-import { collection, doc, setDoc, getDoc } from 'firebase/firestore'
+import { collection, doc, setDoc, getDoc, updateDoc } from 'firebase/firestore'
 
 import { COLLECTIONS } from '@constants/collection'
 import { store } from '@remote/firebase'
@@ -52,4 +52,10 @@ export async function getAccount(userId: string) {
     id: snapshot.id,
     ...(snapshot.data() as Account),
   }
+}
+
+export function updateAccountBalance(userId: string, balance: number) {
+  const snapshot = doc(collection(store, COLLECTIONS.ACCOUNT), userId)
+
+  return updateDoc(snapshot, { balance })
 }

@@ -14,8 +14,6 @@ const FixedBottomButton = dynamic(() => import('@shared/FixedBottomButton'), {
 })
 
 function Preview({ data, mode }: { data: Event; mode: 'preview' | 'edit' }) {
-  console.log('preview', data)
-
   const { title, subTitle, buttonLabel, link, contents } = data
   const router = useRouter()
 

@@ -32,9 +32,6 @@ const getY = (d: ChartData) => d.balance
 const formatDate = (date: string) => format(parseISO(date), 'M월')
 
 function MonthlyChart({ chartData, width, height }: MonthlyChartProps) {
-  console.log('width', width)
-  console.log('chartData', chartData)
-
   // bounds
   const xMax = width
   const yMax = height - verticalMargin

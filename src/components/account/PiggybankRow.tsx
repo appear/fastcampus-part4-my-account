@@ -24,8 +24,6 @@ function PiggybankRow() {
     },
   )
 
-  console.log('piggybank', data)
-
   if (data == null) {
     return (
       <div>

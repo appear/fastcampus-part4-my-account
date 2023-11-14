@@ -41,8 +41,6 @@ function TransactionsPage() {
     fetchNextPage,
   } = useTransactions({ filter: currentFilter })
 
-  console.log('data', data)
-
   const loadMore = useCallback(() => {
     if (hasNextPage === false || isFetching) {
       return
